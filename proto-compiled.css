@@ -1,0 +1,232 @@
+/*------------------------------------*\
+ *  Proto by @adamwhitcroft
+ *
+ *  Proto is a simple HTML & SCSS rapid 
+ *  prototyping toolkit for responsive web design.
+ *
+ *  http://adamwhitcroft.com/Proto
+\*------------------------------------*/
+.proto-wrap {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  font-family: consolas,monospace; }
+
+.proto {
+  overflow: hidden;
+  padding: 1px 1px 0px 0px;
+  background: white; }
+  .proto div {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 80px; }
+  .proto .label {
+    display: table-cell;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    background: #ccc;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 12px; }
+  .proto .center {
+    margin: 0 auto;
+    width: 70%; }
+  .proto .grid div {
+    float: left; }
+  .proto .hundred {
+    width: 100%; }
+  .proto .ninety {
+    width: 90%; }
+  .proto .eighty {
+    width: 80%; }
+  .proto .seventyfive {
+    width: 75%; }
+  .proto .seventyfive {
+    width: 75%; }
+  .proto .seventy {
+    width: 70%; }
+  .proto .sixty {
+    width: 60%; }
+  .proto .fifty {
+    width: 50%; }
+  .proto .forty {
+    width: 40%; }
+  .proto .thirtythree {
+    width: 33.333%; }
+  .proto .thirty {
+    width: 30%; }
+  .proto .twentyfive {
+    width: 25%; }
+  .proto .twenty {
+    width: 20%; }
+  .proto .ten {
+    width: 10%; }
+  .proto .not-desktop {
+    display: none; }
+  .proto .tablet {
+    display: none; }
+  .proto .phone {
+    display: none; }
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .proto .desktop-demo .label,
+  .proto .not-tablet-demo .label,
+  .proto .not-phone-demo .label {
+    background: #dff0d8;
+    color: #468847; }
+  .proto .not-desktop-demo .label,
+  .proto .tablet-demo .label,
+  .proto .phone-demo .label {
+    background: #f0d8d8;
+    color: #c43a3a; }
+  .proto .grid .desktop-to-hundred {
+    width: 100%; }
+  .proto .grid .desktop-to-ninety {
+    width: 90%; }
+  .proto .grid .desktop-to-eighty {
+    width: 80%; }
+  .proto .grid .desktop-to-seventyfive {
+    width: 75%; }
+  .proto .grid .desktop-to-seventy {
+    width: 70%; }
+  .proto .grid .desktop-to-sixty {
+    width: 60%; }
+  .proto .grid .desktop-to-fifty {
+    width: 50%; }
+  .proto .grid .desktop-to-forty {
+    width: 40%; }
+  .proto .grid .desktop-to-thirtythree {
+    width: 33.33%; }
+  .proto .grid .desktop-to-thirty {
+    width: 30%; }
+  .proto .grid .desktop-to-twentyfive {
+    width: 25%; }
+  .proto .grid .desktop-to-twenty {
+    width: 20%; }
+  .proto .grid .desktop-to-ten {
+    width: 10%; } }
+/* Tablet Up To Desktop */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .proto .tablet {
+    display: table; }
+  .proto .not-desktop {
+    display: none; }
+  .proto .not-tablet {
+    display: none; }
+  .proto .desktop-demo .label,
+  .proto .tablet-demo .label,
+  .proto .not-phone-demo .label {
+    background: #dff0d8;
+    color: #468847; }
+  .proto .not-desktop-demo .label,
+  .proto .not-tablet-demo .label,
+  .proto .phone-demo .label {
+    background: #f0d8d8;
+    color: #c43a3a; }
+  .proto .grid .tablet-to-hundred {
+    width: 100%; }
+  .proto .grid .tablet-to-ninety {
+    width: 90%; }
+  .proto .grid .tablet-to-eighty {
+    width: 80%; }
+  .proto .grid .tablet-to-seventyfive {
+    width: 75%; }
+  .proto .grid .tablet-to-seventy {
+    width: 70%; }
+  .proto .grid .tablet-to-sixty {
+    width: 60%; }
+  .proto .grid .tablet-to-fifty {
+    width: 50%; }
+  .proto .grid .tablet-to-forty {
+    width: 40%; }
+  .proto .grid .tablet-to-thirtythree {
+    width: 33.33%; }
+  .proto .grid .tablet-to-thirty {
+    width: 30%; }
+  .proto .grid .tablet-to-twentyfive {
+    width: 25%; }
+  .proto .grid .tablet-to-twenty {
+    width: 20%; }
+  .proto .grid .tablet-to-ten {
+    width: 10%; } }
+/* Tablet Down To Phone */
+@media (max-width: 767px) {
+  .proto .desktop {
+    display: none; }
+  .proto .not-desktop {
+    display: table; }
+  .proto .tablet {
+    display: table; }
+  .proto .not-tablet {
+    display: none; }
+  .proto .phone {
+    display: table; }
+  .proto .not-phone {
+    display: none; }
+  .proto .not-desktop-demo .label,
+  .proto .tablet-demo .label,
+  .proto .phone-demo .label {
+    background: #dff0d8;
+    color: #468847; }
+  .proto .desktop-demo .label,
+  .proto .not-tablet-demo .label,
+  .proto .not-phone-demo .label {
+    background: #f0d8d8;
+    color: #c43a3a; }
+  .proto .grid .phone-to-hundred {
+    width: 100%; }
+  .proto .grid .phone-to-ninety {
+    width: 90%; }
+  .proto .grid .phone-to-eighty {
+    width: 80%; }
+  .proto .grid .phone-to-seventyfive {
+    width: 75%; }
+  .proto .grid .phone-to-seventy {
+    width: 70%; }
+  .proto .grid .phone-to-sixty {
+    width: 60%; }
+  .proto .grid .phone-to-fifty {
+    width: 50%; }
+  .proto .grid .phone-to-forty {
+    width: 40%; }
+  .proto .grid .phone-to-thirtythree {
+    width: 33.33%; }
+  .proto .grid .phone-to-thirty {
+    width: 30%; }
+  .proto .grid .phone-to-twentyfive {
+    width: 25%; }
+  .proto .grid .phone-to-twenty {
+    width: 20%; }
+  .proto .grid .phone-to-ten {
+    width: 10%; } }
+/* Phones */
+@media (max-width: 480px) {
+  .proto .center {
+    margin: 0;
+    width: 100%; }
+  .proto .grid div {
+    float: none;
+    width: 100%; }
+  .proto .desktop {
+    display: none; }
+  .proto .tablet {
+    display: none; }
+  .proto .phone {
+    display: table; }
+  .proto .not-phone {
+    display: none; }
+  .proto .not-desktop-demo .label,
+  .proto .not-tablet-demo .label,
+  .proto .phone-demo .label {
+    background: #dff0d8;
+    color: #468847; }
+  .proto .desktop-demo .label,
+  .proto .tablet-demo .label,
+  .proto .not-phone-demo .label {
+    background: #f0d8d8;
+    color: #c43a3a; } }
+/*------------------------------------*\
+*  Enjoy!
+\*------------------------------------*/

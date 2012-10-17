@@ -1,0 +1,465 @@
+/*------------------------------------*\
+ *  Proto by @adamwhitcroft
+ *
+ *  Proto is a simple HTML & SCSS rapid 
+ *  prototyping toolkit for responsive web design.
+ *
+ *  http://adamwhitcroft.com/Proto
+\*------------------------------------*/
+
+//  Proto Variables
+//  Be sure to inlclude appropriate units i.e. 'px', '%', 'em' etc
+
+//  Basic block variables
+$blockHeight:				80px;
+$centerWidth:				70%;
+
+//  Demo variables
+$blockDemoPassBackground:	#dff0d8;
+$blockDemoPassColor:		#468847;
+$blockDemoFailBackground:	#f0d8d8;
+$blockDemoFailColor:		#c43a3a;
+
+//  Media Queries
+$desktopWidth:				1024px;	
+$tabletWidth:				768px;
+$phoneWidth:				480px;
+
+//  (These comments will be stripped out during compile)
+
+ .proto-wrap {
+	overflow:hidden;
+	border:1px solid #ccc;
+	font-family:consolas,monospace;
+ }
+
+ .proto {
+	overflow:hidden;
+	padding:1px 1px 0px 0px;
+	background:white;
+
+	div {
+		position:relative;
+		display:table;
+		width:100%;
+		height:$blockHeight;
+	}
+
+	.label {
+		display:table-cell;
+		border-bottom:1px solid white;
+		border-left:1px solid white;
+		background:#ccc;
+		color:white;
+		vertical-align:middle;
+		text-align:center;
+		font-size:12px;		
+	}
+
+	.center {
+		margin:0 auto;
+		width:$centerWidth;
+	}
+
+	.grid div {
+		float:left;
+	}
+
+	.hundred {
+		width:100%;
+	}
+
+	.ninety {
+		width:90%;
+	}
+
+	.eighty {
+		width:80%;
+	}
+
+	.seventyfive {
+		width:75%;
+	}
+
+	.seventyfive {
+		width:75%;
+	}
+
+	.seventy {
+		width:70%;
+	}
+
+	.sixty {
+		width:60%;
+	}
+
+	.fifty {
+		width:50%;
+	}
+
+	.forty {
+		width:40%;
+	}
+
+	.thirtythree {
+		width:33.333%;
+	}
+
+	.thirty {
+		width:30%;
+	}
+
+	.twentyfive {
+		width:25%;
+	}
+
+	.twenty {
+		width:20%;
+	}
+
+	.ten {
+		width:10%;
+	}
+
+	.not-desktop {
+		display:none;
+	}
+
+	.tablet {
+		display:none;
+	}
+
+	.phone {
+		display:none;
+	}
+
+ }
+
+/* Desktop */
+
+@media (min-width:$desktopWidth) {
+
+	.proto {
+
+		.desktop-demo .label,
+		.not-tablet-demo .label,
+		.not-phone-demo .label {
+			background:$blockDemoPassBackground;
+			color:$blockDemoPassColor;
+		}
+
+		.not-desktop-demo .label,
+		.tablet-demo .label,
+		.phone-demo .label {
+			background:$blockDemoFailBackground;
+			color:$blockDemoFailColor;
+		}
+
+		.grid {
+
+			.desktop-to-hundred {
+				width:100%;
+			}
+
+			.desktop-to-ninety {
+				width:90%;
+			}
+
+			.desktop-to-eighty {
+				width:80%;
+			}
+
+			.desktop-to-seventyfive {
+				width:75%;
+			}
+
+			.desktop-to-seventy {
+				width:70%;
+			}
+
+			.desktop-to-sixty {
+				width:60%;
+			}
+
+			.desktop-to-fifty {
+				width:50%;
+			}
+
+			.desktop-to-forty {
+				width:40%;
+			}
+
+			.desktop-to-thirtythree {
+				width:33.33%;
+			}
+
+			.desktop-to-thirty {
+				width:30%;
+			}
+
+			.desktop-to-twentyfive {
+				width:25%;
+			}
+
+			.desktop-to-twenty {
+				width:20%;
+			}
+
+			.desktop-to-ten {
+				width:10%;
+			}
+
+		}
+
+	}
+
+}
+
+/* Tablet Up To Desktop */
+
+@media (min-width:$tabletWidth) and (max-width:$desktopWidth - 1px) {
+
+	.proto {
+
+		.tablet {
+			display:table;
+		}
+
+		.not-desktop {
+			display:none;
+		}
+
+		.not-tablet {
+			display:none;
+		}
+
+		.desktop-demo .label,
+		.tablet-demo .label,
+		.not-phone-demo .label {
+			background:$blockDemoPassBackground;
+			color:$blockDemoPassColor;
+		}
+
+		.not-desktop-demo .label,
+		.not-tablet-demo .label,
+		.phone-demo .label {
+			background:$blockDemoFailBackground;
+			color:$blockDemoFailColor;	
+		}
+
+		.grid {
+
+			.tablet-to-hundred {
+				width:100%;
+			}
+
+			.tablet-to-ninety {
+				width:90%;
+			}
+
+			.tablet-to-eighty {
+				width:80%;
+			}
+
+			.tablet-to-seventyfive {
+				width:75%;
+			}
+
+			.tablet-to-seventy {
+				width:70%;
+			}
+
+			.tablet-to-sixty {
+				width:60%;
+			}
+
+			.tablet-to-fifty {
+				width:50%;
+			}
+
+			.tablet-to-forty {
+				width:40%;
+			}
+
+			.tablet-to-thirtythree {
+				width:33.33%;
+			}
+
+			.tablet-to-thirty {
+				width:30%;
+			}
+
+			.tablet-to-twentyfive {
+				width:25%;
+			}
+
+			.tablet-to-twenty {
+				width:20%;
+			}
+
+			.tablet-to-ten {
+				width:10%;
+			}
+
+		}
+
+	}
+
+}
+
+/* Tablet Down To Phone */
+
+@media (max-width:$tabletWidth - 1px) {
+
+	.proto {
+
+		.desktop {
+			display:none;
+		}
+
+		.not-desktop {
+			display:table;
+		}
+
+		.tablet {
+			display:table;
+		}
+
+		.not-tablet {
+			display:none;
+		}
+
+		.phone {
+			display:table;
+		}
+
+		.not-phone {
+			display:none;
+		}
+
+		.not-desktop-demo .label,
+		.tablet-demo .label,
+		.phone-demo .label {
+			background:$blockDemoPassBackground;
+			color:$blockDemoPassColor;
+		}
+
+		.desktop-demo .label,
+		.not-tablet-demo .label,
+		.not-phone-demo .label {
+			background:$blockDemoFailBackground;
+			color:$blockDemoFailColor;
+		}
+
+		.grid {
+
+			.phone-to-hundred {
+				width:100%;
+			}
+
+			.phone-to-ninety {
+				width:90%;
+			}
+
+			.phone-to-eighty {
+				width:80%;
+			}
+
+			.phone-to-seventyfive {
+				width:75%;
+			}
+
+			.phone-to-seventy {
+				width:70%;
+			}
+
+			.phone-to-sixty {
+				width:60%;
+			}
+
+			.phone-to-fifty {
+				width:50%;
+			}
+
+			.phone-to-forty {
+				width:40%;
+			}
+
+			.phone-to-thirtythree {
+				width:33.33%;
+			}
+
+			.phone-to-thirty {
+				width:30%;
+			}
+
+			.phone-to-twentyfive {
+				width:25%;
+			}
+
+			.phone-to-twenty {
+				width:20%;
+			}
+
+			.phone-to-ten {
+				width:10%;
+			}
+
+		}
+
+	}
+
+}
+ 
+/* Phones */
+
+@media (max-width:$phoneWidth) {
+
+	.proto {
+
+		.center {
+			margin:0;
+			width:100%;
+		}
+
+		.grid div {
+			float:none;
+			width:100%;
+		}
+
+		.desktop {
+			display:none;
+		}
+
+		.tablet {
+			display:none;
+		}
+
+		.phone {
+			display:table;
+		}
+
+		.not-phone {
+			display:none;
+		}
+
+		.not-desktop-demo .label,
+		.not-tablet-demo .label,
+		.phone-demo .label {
+			background:$blockDemoPassBackground;
+			color:$blockDemoPassColor;
+		}
+
+		.desktop-demo .label,
+		.tablet-demo .label,
+		.not-phone-demo .label {
+			background:$blockDemoFailBackground;
+			color:$blockDemoFailColor;
+		}
+
+	}
+
+}
+/*------------------------------------*\
+*  Enjoy!
+\*------------------------------------*/
