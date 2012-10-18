@@ -7,6 +7,8 @@ Visit the <a href="http://adamwhitcroft.com/proto/">Proto</a> website for detail
 
 ### Class Reference Table:
 
+For complete usage examples, refer to the <a href="http://adamwhitcroft.com/proto/">Proto</a> website.
+
 | Class | Description |
 | ----- | ----------- |
 | proto | Defines the outermost wrapper |
