@@ -1,5 +1,6 @@
 /*------------------------------------*\
  *  Proto by @adamwhitcroft
+ *  V1.01
  *
  *  Proto is a simple HTML & SCSS rapid 
  *  prototyping toolkit for responsive web design.
@@ -7,53 +8,33 @@
  *  http://adamwhitcroft.com/proto/
 \*------------------------------------*/
 
-//  Proto Variables
+//  Proto vars
 //  Be sure to inlclude appropriate units i.e. 'px', '%', 'em' etc
-
-//  Basic block variables
-$blockHeight:				80px;
-$centerWidth:				70%;
-
-//  Demo variables
-$blockDemoPassBackground:	#dff0d8;
-$blockDemoPassColor:		#468847;
-$blockDemoFailBackground:	#f0d8d8;
-$blockDemoFailColor:		#c43a3a;
-
-//  Media Queries
-$desktopWidth:				1024px;	
-$tabletWidth:				768px;
-$phoneWidth:				480px;
-
 //  (These comments will be stripped out during compile)
 
- .proto-wrap {
-	overflow:hidden;
-	border:1px solid #ccc;
-	font-family:consolas,monospace;
- }
+//  Base
+$protoBlockHeight: 80px;
+$centerWidth: 70%;
 
- .proto {
-	overflow:hidden;
-	padding:1px 1px 0px 0px;
-	background:white;
+//  Demo
+$DemoPass: #dff0d8;
+$DemoFail: #f0d8d8;
+
+//  Media Query
+$desktopWidth: 1024px;	
+$tabletWidth: 768px;
+$phoneWidth: 480px;
+
+.proto {
 
 	div {
 		position:relative;
 		display:table;
+		box-sizing:border-box;
 		width:100%;
-		height:$blockHeight;
-	}
-
-	.label {
-		display:table-cell;
-		border-bottom:1px solid white;
-		border-left:1px solid white;
-		background:#ccc;
-		color:white;
-		vertical-align:middle;
-		text-align:center;
-		font-size:12px;		
+		height:$protoBlockHeight;
+		background:#eee;
+		color:#9099A3;
 	}
 
 	.center {
@@ -61,63 +42,64 @@ $phoneWidth:				480px;
 		width:$centerWidth;
 	}
 
+	.label {
+		display:table-cell;
+		vertical-align:middle;
+		text-align:center;
+	}
+
 	.grid div {
 		float:left;
 	}
 
-	.hundred {
+	.grid .hundred {
 		width:100%;
 	}
 
-	.ninety {
+	.grid .ninety {
 		width:90%;
 	}
 
-	.eighty {
+	.grid .eighty {
 		width:80%;
 	}
 
-	.seventyfive {
+	.grid .seventyfive {
 		width:75%;
 	}
 
-	.seventyfive {
-		width:75%;
-	}
-
-	.seventy {
+	.grid .seventy {
 		width:70%;
 	}
 
-	.sixty {
+	.grid .sixty {
 		width:60%;
 	}
 
-	.fifty {
+	.grid .fifty {
 		width:50%;
 	}
 
-	.forty {
+	.grid .forty {
 		width:40%;
 	}
-
-	.thirtythree {
+	.grid .thirtythree {
 		width:33.333%;
 	}
 
-	.thirty {
+	.grid .thirty {
 		width:30%;
 	}
 
-	.twentyfive {
+	.grid .twentyfive {
 		width:25%;
 	}
 
-	.twenty {
+	.grid .twenty {
 		width:20%;
 	}
 
-	.ten {
+	.grid .ten {
 		width:10%;
 	}
 
@@ -133,82 +115,76 @@ $phoneWidth:				480px;
 		display:none;
 	}
 
- }
+}
 
 /* Desktop */
 
 @media (min-width:$desktopWidth) {
 
 	.proto {
-
-		.desktop-demo .label,
-		.not-tablet-demo .label,
-		.not-phone-demo .label {
-			background:$blockDemoPassBackground;
-			color:$blockDemoPassColor;
+		.desktop-demo,
+		.not-tablet-demo,
+		.not-phone-demo {
+			background:$DemoPass;
+			color:darken($DemoPass,50%);
 		}
 
-		.not-desktop-demo .label,
-		.tablet-demo .label,
-		.phone-demo .label {
-			background:$blockDemoFailBackground;
-			color:$blockDemoFailColor;
+		.not-desktop-demo,
+		.tablet-demo,
+		.phone-demo {
+			background:$DemoFail;
+			color:darken($DemoFail,50%);
 		}
 
-		.grid {
+		.grid .desktop-to-hundred {
+			width:100%;
+		}
 
-			.desktop-to-hundred {
-				width:100%;
-			}
+		.grid .desktop-to-ninety {
+			width:90%;
+		}
 
-			.desktop-to-ninety {
-				width:90%;
-			}
+		.grid .desktop-to-eighty {
+			width:80%;
+		}
 
-			.desktop-to-eighty {
-				width:80%;
-			}
+		.grid .desktop-to-seventyfive {
+			width:75%;
+		}
 
-			.desktop-to-seventyfive {
-				width:75%;
-			}
+		.grid .desktop-to-seventy {
+			width:70%;
+		}
 
-			.desktop-to-seventy {
-				width:70%;
-			}
+		.grid .desktop-to-sixty {
+			width:60%;
+		}
 
-			.desktop-to-sixty {
-				width:60%;
-			}
+		.grid .desktop-to-fifty {
+			width:50%;
+		}
 
-			.desktop-to-fifty {
-				width:50%;
-			}
+		.grid .desktop-to-forty {
+			width:40%;
+		}
+		.grid .desktop-to-thirtythree {
+			width:33.333%;
+		}
 
-			.desktop-to-forty {
-				width:40%;
-			}
+		.grid .desktop-to-thirty {
+			width:30%;
+		}
 
-			.desktop-to-thirtythree {
-				width:33.33%;
-			}
+		.grid .desktop-to-twentyfive {
+			width:25%;
+		}
 
-			.desktop-to-thirty {
-				width:30%;
-			}
+		.grid .desktop-to-twenty {
+			width:20%;
+		}
 
-			.desktop-to-twentyfive {
-				width:25%;
-			}
-
-			.desktop-to-twenty {
-				width:20%;
-			}
-
-			.desktop-to-ten {
-				width:10%;
-			}
-
+		.grid .desktop-to-ten {
+			width:10%;
 		}
 
 	}
@@ -233,18 +209,18 @@ $phoneWidth:				480px;
 			display:none;
 		}
 
-		.desktop-demo .label,
-		.tablet-demo .label,
-		.not-phone-demo .label {
-			background:$blockDemoPassBackground;
-			color:$blockDemoPassColor;
+		.desktop-demo,
+		.tablet-demo,
+		.not-phone-demo {
+			background:$DemoPass;
+			color:darken($DemoPass,50%);
 		}
 
-		.not-desktop-demo .label,
-		.not-tablet-demo .label,
-		.phone-demo .label {
-			background:$blockDemoFailBackground;
-			color:$blockDemoFailColor;	
+		.not-desktop-demo,
+		.not-tablet-demo,
+		.phone-demo {
+			background:$DemoFail;
+			color:darken($DemoFail,50%);
 		}
 
 		.grid {
@@ -280,9 +256,8 @@ $phoneWidth:				480px;
 			.tablet-to-forty {
 				width:40%;
 			}
-
 			.tablet-to-thirtythree {
-				width:33.33%;
+				width:33.333%;
 			}
 
 			.tablet-to-thirty {
@@ -337,18 +312,18 @@ $phoneWidth:				480px;
 			display:none;
 		}
 
-		.not-desktop-demo .label,
-		.tablet-demo .label,
-		.phone-demo .label {
-			background:$blockDemoPassBackground;
-			color:$blockDemoPassColor;
+		.not-desktop-demo,
+		.tablet-demo,
+		.phone-demo {
+			background:$DemoPass;
+			color:darken($DemoPass,50%);
 		}
 
-		.desktop-demo .label,
-		.not-tablet-demo .label,
-		.not-phone-demo .label {
-			background:$blockDemoFailBackground;
-			color:$blockDemoFailColor;
+		.desktop-demo,
+		.not-tablet-demo,
+		.not-phone-demo {
+			background:$DemoFail;
+			color:darken($DemoFail,50%);
 		}
 
 		.grid {
@@ -384,9 +359,8 @@ $phoneWidth:				480px;
 			.phone-to-forty {
 				width:40%;
 			}
-
 			.phone-to-thirtythree {
-				width:33.33%;
+				width:33.333%;
 			}
 
 			.phone-to-thirty {
@@ -417,13 +391,14 @@ $phoneWidth:				480px;
 
 	.proto {
 
-		.center {
-			margin:0;
-			width:100%;
-		}
-
+		div,
 		.grid div {
 			float:none;
+			width:100% !important;
+		}
+
+		.center {
+			margin:0;
 			width:100%;
 		}
 
@@ -443,18 +418,18 @@ $phoneWidth:				480px;
 			display:none;
 		}
 
-		.not-desktop-demo .label,
-		.not-tablet-demo .label,
-		.phone-demo .label {
-			background:$blockDemoPassBackground;
-			color:$blockDemoPassColor;
+		.not-desktop-demo,
+		.not-tablet-demo,
+		.phone-demo {
+			background:$DemoPass;
+			color:darken($DemoPass,50%);
 		}
 
-		.desktop-demo .label,
-		.tablet-demo .label,
-		.not-phone-demo .label {
-			background:$blockDemoFailBackground;
-			color:$blockDemoFailColor;
+		.desktop-demo,
+		.tablet-demo,
+		.not-phone-demo {
+			background:$DemoFail;
+			color:darken($DemoFail,50%);
 		}
 
 	}
