@@ -1,4 +1,37 @@
-#Proto
+# Proto
 A simple HTML & SCSS rapid prototyping toolkit for responsive web design by <a href="http://twitter.com/#!/adamwhitcroft">@adamwhitcroft</a>.
 
 Visit the <a href="http://adamwhitcroft.com/proto/">Proto</a> website for more information.
+
+--
+
+### Class Reference Table:
+
+| Class | Description |
+| ----- | ----------- |
+| proto | Defines the outermost wrapper |
+| label | Used for annotations |
+| center | Centers an element within its parent |
+| grid | Defines an element that contains children using a grid system |
+| hundred | Sets a width of 100% on an element |
+| ninety | Sets a width of 90% on an element |
+| eighty | Sets a width of 80% on an element |
+| seventyfive | Sets a width of 75% on an element |
+| seventy | Sets a width of 70% on an element |
+| sixty | Sets a width of 60% on an element |
+| fifty | Sets a width of 50% on an element |
+| forty | Sets a width of 40% on an element |
+| thirtythree | Sets a width of 33.333% on an element |
+| thirty | Sets a width of 30% on an element |
+| twentyfive | Sets a width of 25% on an element |
+| twenty | Sets a width of 20% on an element |
+| ten | Sets a width of 10% on an element |
+| desktop | Defines an element that will only be visible on desktops |
+| tablet | Defines an element that will only be visible on tablets |
+| phone | Defines an element that will only be visible on phones |
+| not-desktop | Defines an element that will be visible on everything but desktops |
+| not-tablet | Defines an element that will be visible on everything but tablets |
+| not-phone | Defines an element that will be visible on everything but phones |
+| -demo _{viewport}-demo_ | Visually demonstrates that an element will be hidden without hiding it |
+| -to- _{viewport}-to-{new width}_ | Defines a change in an element's size depending on the viewport |
+
