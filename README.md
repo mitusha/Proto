@@ -1,7 +1,7 @@
 # Proto
 A simple HTML & SCSS rapid prototyping toolkit for responsive web design by <a href="http://twitter.com/#!/adamwhitcroft">@adamwhitcroft</a>.
 
-Visit the <a href="http://adamwhitcroft.com/proto/">Proto</a> website for more information.
+Visit the <a href="http://adamwhitcroft.com/proto/">Proto</a> website for detailed documentation and usage examples.
 
 --
 
@@ -32,6 +32,6 @@ Visit the <a href="http://adamwhitcroft.com/proto/">Proto</a> website for more i
 | not-desktop | Defines an element that will be visible on everything but desktops |
 | not-tablet | Defines an element that will be visible on everything but tablets |
 | not-phone | Defines an element that will be visible on everything but phones |
-| -demo _{viewport}-demo_ | Visually demonstrates that an element will be hidden without hiding it |
-| -to- _{viewport}-to-{new width}_ | Defines a change in an element's size depending on the viewport |
+| -demo | Visually demonstrates that an element will be hidden without hiding it |
+| -to- | Defines a change in an element's size depending on the viewport |
 
