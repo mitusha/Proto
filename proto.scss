@@ -28,18 +28,23 @@ $phoneWidth: 480px;
 
 	div {
 		position:relative;
+		display:table;
 		box-sizing:border-box;
 		width:100%;
 		height:$protoBlockHeight;
 		background:#eee;
 		color:#9099A3;
-		text-align:center;
-		line-height:$protoBlockHeight;
 	}
 
 	.center {
 		margin:0 auto;
 		width:$centerWidth;
+	}
+
+	.label {
+		display:table-cell;
+		vertical-align:middle;
+		text-align:center;
 	}
 
 	.grid div {
@@ -208,7 +213,7 @@ $phoneWidth: 480px;
 	.proto {
 
 		.tablet {
-			display:block;
+			display:table;
 		}
 
 		.not-desktop {
@@ -253,10 +258,6 @@ $phoneWidth: 480px;
 
 			.tablet-to-seventy {
 				width:70%;
-			}
-
-			.tablet-to-sixtysix {
-				width:66.666%;
 			}
 
 			.tablet-to-sixty {
@@ -307,11 +308,11 @@ $phoneWidth: 480px;
 		}
 
 		.not-desktop {
-			display:block;
+			display:table;
 		}
 
 		.tablet {
-			display:block;
+			display:table;
 		}
 
 		.not-tablet {
@@ -319,7 +320,7 @@ $phoneWidth: 480px;
 		}
 
 		.phone {
-			display:block;
+			display:table;
 		}
 
 		.not-phone {
@@ -360,10 +361,6 @@ $phoneWidth: 480px;
 
 			.phone-to-seventy {
 				width:70%;
-			}
-
-			.phone-to-sixtysix {
-				width:66.666%;
 			}
 
 			.phone-to-sixty {
@@ -429,7 +426,7 @@ $phoneWidth: 480px;
 		}
 
 		.phone {
-			display:block;
+			display:table;
 		}
 
 		.not-phone {

@@ -12,6 +12,7 @@ For complete usage examples, refer to the <a href="http://adamwhitcroft.com/prot
 | Class | Description |
 | ----- | ----------- |
 | proto | Defines the outermost wrapper |
+| label | Used for annotations |
 | center | Centers an element within its parent |
 | grid | Defines an element that contains children using a grid system |
 | hundred | Sets a width of 100% on an element |

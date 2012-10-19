@@ -8,16 +8,19 @@
 \*------------------------------------*/
 .proto div {
   position: relative;
+  display: table;
   box-sizing: border-box;
   width: 100%;
   height: 80px;
   background: #eee;
-  color: #9099A3;
-  text-align: center;
-  line-height: 80px; }
+  color: #9099A3; }
 .proto .center {
   margin: 0 auto;
   width: 70%; }
+.proto .label {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center; }
 .proto .grid div {
   float: left; }
 .proto .grid .hundred {
@@ -98,7 +101,7 @@
 /* Tablet Up To Desktop */
 @media (min-width: 768px) and (max-width: 1023px) {
   .proto .tablet {
-    display: block; }
+    display: table; }
   .proto .not-desktop {
     display: none; }
   .proto .not-tablet {
@@ -123,8 +126,6 @@
     width: 75%; }
   .proto .grid .tablet-to-seventy {
     width: 70%; }
-  .proto .grid .tablet-to-sixtysix {
-    width: 66.666%; }
   .proto .grid .tablet-to-sixty {
     width: 60%; }
   .proto .grid .tablet-to-fifty {
@@ -146,13 +147,13 @@
   .proto .desktop {
     display: none; }
   .proto .not-desktop {
-    display: block; }
+    display: table; }
   .proto .tablet {
-    display: block; }
+    display: table; }
   .proto .not-tablet {
     display: none; }
   .proto .phone {
-    display: block; }
+    display: table; }
   .proto .not-phone {
     display: none; }
   .proto .not-desktop-demo,
@@ -175,8 +176,6 @@
     width: 75%; }
   .proto .grid .phone-to-seventy {
     width: 70%; }
-  .proto .grid .phone-to-sixtysix {
-    width: 66.666%; }
   .proto .grid .phone-to-sixty {
     width: 60%; }
   .proto .grid .phone-to-fifty {
@@ -207,7 +206,7 @@
   .proto .tablet {
     display: none; }
   .proto .phone {
-    display: block; }
+    display: table; }
   .proto .not-phone {
     display: none; }
   .proto .not-desktop-demo,
