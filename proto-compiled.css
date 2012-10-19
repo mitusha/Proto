@@ -6,217 +6,246 @@
  *
  *  http://adamwhitcroft.com/proto/
 \*------------------------------------*/
-.proto div {
+.block {
   position: relative;
   display: table;
   box-sizing: border-box;
   width: 100%;
   height: 80px;
-  background: #eee;
+  background: #eeeeee;
   color: #9099A3; }
-.proto .center {
+
+.center {
   margin: 0 auto;
   width: 70%; }
-.proto .label {
+
+.label {
   display: table-cell;
   vertical-align: middle;
   text-align: center; }
-.proto .grid div {
+
+.grid div {
   float: left; }
-.proto .grid .hundred {
+
+.grid .hundred {
   width: 100%; }
-.proto .grid .ninety {
+.grid .ninety {
   width: 90%; }
-.proto .grid .eighty {
+.grid .eighty {
   width: 80%; }
-.proto .grid .seventyfive {
+.grid .seventyfive {
   width: 75%; }
-.proto .grid .seventy {
+.grid .seventy {
   width: 70%; }
-.proto .grid .sixtysix {
+.grid .sixtysix {
   width: 66.666%; }
-.proto .grid .sixty {
+.grid .sixty {
   width: 60%; }
-.proto .grid .fifty {
+.grid .fifty {
   width: 50%; }
-.proto .grid .forty {
+.grid .forty {
   width: 40%; }
-.proto .grid .thirtythree {
+.grid .thirtythree {
   width: 33.333%; }
-.proto .grid .thirty {
+.grid .thirty {
   width: 30%; }
-.proto .grid .twentyfive {
+.grid .twentyfive {
   width: 25%; }
-.proto .grid .twenty {
+.grid .twenty {
   width: 20%; }
-.proto .grid .ten {
+.grid .ten {
   width: 10%; }
-.proto .not-desktop {
+
+.not-desktop {
   display: none; }
-.proto .tablet {
+
+.tablet {
   display: none; }
-.proto .phone {
+
+.phone {
   display: none; }
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .proto .desktop-demo,
-  .proto .not-tablet-demo,
-  .proto .not-phone-demo {
+  .desktop-demo,
+  .not-tablet-demo,
+  .not-phone-demo {
     background: #dff0d8;
     color: #529138; }
-  .proto .not-desktop-demo,
-  .proto .tablet-demo,
-  .proto .phone-demo {
+
+  .not-desktop-demo,
+  .tablet-demo,
+  .phone-demo {
     background: #f0d8d8;
     color: #913838; }
-  .proto .grid .desktop-to-hundred {
+
+  .grid .desktop-to-hundred {
     width: 100%; }
-  .proto .grid .desktop-to-ninety {
+  .grid .desktop-to-ninety {
     width: 90%; }
-  .proto .grid .desktop-to-eighty {
+  .grid .desktop-to-eighty {
     width: 80%; }
-  .proto .grid .desktop-to-seventyfive {
+  .grid .desktop-to-seventyfive {
     width: 75%; }
-  .proto .grid .desktop-to-seventy {
+  .grid .desktop-to-seventy {
     width: 70%; }
-  .proto .grid .desktop-to-sixtysix {
+  .grid .desktop-to-sixtysix {
     width: 66.666%; }
-  .proto .grid .desktop-to-sixty {
+  .grid .desktop-to-sixty {
     width: 60%; }
-  .proto .grid .desktop-to-fifty {
+  .grid .desktop-to-fifty {
     width: 50%; }
-  .proto .grid .desktop-to-forty {
+  .grid .desktop-to-forty {
     width: 40%; }
-  .proto .grid .desktop-to-thirtythree {
+  .grid .desktop-to-thirtythree {
     width: 33.333%; }
-  .proto .grid .desktop-to-thirty {
+  .grid .desktop-to-thirty {
     width: 30%; }
-  .proto .grid .desktop-to-twentyfive {
+  .grid .desktop-to-twentyfive {
     width: 25%; }
-  .proto .grid .desktop-to-twenty {
+  .grid .desktop-to-twenty {
     width: 20%; }
-  .proto .grid .desktop-to-ten {
+  .grid .desktop-to-ten {
     width: 10%; } }
 /* Tablet Up To Desktop */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .proto .tablet {
+  .tablet {
     display: table; }
-  .proto .not-desktop {
+
+  .not-desktop {
     display: none; }
-  .proto .not-tablet {
+
+  .not-tablet {
     display: none; }
-  .proto .desktop-demo,
-  .proto .tablet-demo,
-  .proto .not-phone-demo {
+
+  .desktop-demo,
+  .tablet-demo,
+  .not-phone-demo {
     background: #dff0d8;
     color: #529138; }
-  .proto .not-desktop-demo,
-  .proto .not-tablet-demo,
-  .proto .phone-demo {
+
+  .not-desktop-demo,
+  .not-tablet-demo,
+  .phone-demo {
     background: #f0d8d8;
     color: #913838; }
-  .proto .grid .tablet-to-hundred {
+
+  .grid .tablet-to-hundred {
     width: 100%; }
-  .proto .grid .tablet-to-ninety {
+  .grid .tablet-to-ninety {
     width: 90%; }
-  .proto .grid .tablet-to-eighty {
+  .grid .tablet-to-eighty {
     width: 80%; }
-  .proto .grid .tablet-to-seventyfive {
+  .grid .tablet-to-seventyfive {
     width: 75%; }
-  .proto .grid .tablet-to-seventy {
+  .grid .tablet-to-seventy {
     width: 70%; }
-  .proto .grid .tablet-to-sixty {
+  .grid .tablet-to-sixty {
     width: 60%; }
-  .proto .grid .tablet-to-fifty {
+  .grid .tablet-to-fifty {
     width: 50%; }
-  .proto .grid .tablet-to-forty {
+  .grid .tablet-to-forty {
     width: 40%; }
-  .proto .grid .tablet-to-thirtythree {
+  .grid .tablet-to-thirtythree {
     width: 33.333%; }
-  .proto .grid .tablet-to-thirty {
+  .grid .tablet-to-thirty {
     width: 30%; }
-  .proto .grid .tablet-to-twentyfive {
+  .grid .tablet-to-twentyfive {
     width: 25%; }
-  .proto .grid .tablet-to-twenty {
+  .grid .tablet-to-twenty {
     width: 20%; }
-  .proto .grid .tablet-to-ten {
+  .grid .tablet-to-ten {
     width: 10%; } }
 /* Tablet Down To Phone */
 @media (max-width: 767px) {
-  .proto .desktop {
+  .desktop {
     display: none; }
-  .proto .not-desktop {
+
+  .not-desktop {
     display: table; }
-  .proto .tablet {
+
+  .tablet {
     display: table; }
-  .proto .not-tablet {
+
+  .not-tablet {
     display: none; }
-  .proto .phone {
+
+  .phone {
     display: table; }
-  .proto .not-phone {
+
+  .not-phone {
     display: none; }
-  .proto .not-desktop-demo,
-  .proto .tablet-demo,
-  .proto .phone-demo {
+
+  .not-desktop-demo,
+  .tablet-demo,
+  .phone-demo {
     background: #dff0d8;
     color: #529138; }
-  .proto .desktop-demo,
-  .proto .not-tablet-demo,
-  .proto .not-phone-demo {
+
+  .desktop-demo,
+  .not-tablet-demo,
+  .not-phone-demo {
     background: #f0d8d8;
     color: #913838; }
-  .proto .grid .phone-to-hundred {
+
+  .grid .phone-to-hundred {
     width: 100%; }
-  .proto .grid .phone-to-ninety {
+  .grid .phone-to-ninety {
     width: 90%; }
-  .proto .grid .phone-to-eighty {
+  .grid .phone-to-eighty {
     width: 80%; }
-  .proto .grid .phone-to-seventyfive {
+  .grid .phone-to-seventyfive {
     width: 75%; }
-  .proto .grid .phone-to-seventy {
+  .grid .phone-to-seventy {
     width: 70%; }
-  .proto .grid .phone-to-sixty {
+  .grid .phone-to-sixty {
     width: 60%; }
-  .proto .grid .phone-to-fifty {
+  .grid .phone-to-fifty {
     width: 50%; }
-  .proto .grid .phone-to-forty {
+  .grid .phone-to-forty {
     width: 40%; }
-  .proto .grid .phone-to-thirtythree {
+  .grid .phone-to-thirtythree {
     width: 33.333%; }
-  .proto .grid .phone-to-thirty {
+  .grid .phone-to-thirty {
     width: 30%; }
-  .proto .grid .phone-to-twentyfive {
+  .grid .phone-to-twentyfive {
     width: 25%; }
-  .proto .grid .phone-to-twenty {
+  .grid .phone-to-twenty {
     width: 20%; }
-  .proto .grid .phone-to-ten {
+  .grid .phone-to-ten {
     width: 10%; } }
 /* Phones */
 @media (max-width: 480px) {
-  .proto div,
-  .proto .grid div {
+  .block,
+  .grid .block {
     float: none;
     width: 100% !important; }
-  .proto .center {
+
+  .center {
     margin: 0;
     width: 100%; }
-  .proto .desktop {
+
+  .desktop {
     display: none; }
-  .proto .tablet {
+
+  .tablet {
     display: none; }
-  .proto .phone {
+
+  .phone {
     display: table; }
-  .proto .not-phone {
+
+  .not-phone {
     display: none; }
-  .proto .not-desktop-demo,
-  .proto .not-tablet-demo,
-  .proto .phone-demo {
+
+  .not-desktop-demo,
+  .not-tablet-demo,
+  .phone-demo {
     background: #dff0d8;
     color: #529138; }
-  .proto .desktop-demo,
-  .proto .tablet-demo,
-  .proto .not-phone-demo {
+
+  .desktop-demo,
+  .tablet-demo,
+  .not-phone-demo {
     background: #f0d8d8;
     color: #913838; } }
 /*------------------------------------*\
