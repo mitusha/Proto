@@ -12,7 +12,6 @@ For complete usage examples, refer to the <a href="http://adamwhitcroft.com/prot
 | Class | Description |
 | ----- | ----------- |
 | proto | Defines the outermost wrapper |
-| label | Used for annotations |
 | center | Centers an element within its parent |
 | grid | Defines an element that contains children using a grid system |
 | hundred | Sets a width of 100% on an element |
@@ -20,6 +19,7 @@ For complete usage examples, refer to the <a href="http://adamwhitcroft.com/prot
 | eighty | Sets a width of 80% on an element |
 | seventyfive | Sets a width of 75% on an element |
 | seventy | Sets a width of 70% on an element |
+| sixtysix | Sets a width of 66.666% on an element |
 | sixty | Sets a width of 60% on an element |
 | fifty | Sets a width of 50% on an element |
 | forty | Sets a width of 40% on an element |
