@@ -12,6 +12,7 @@
 //  (These comments will be stripped out during compile)
 
 //  Base
+$protoBlockBackground: #eee;
 $protoBlockHeight: 80px;
 $centerWidth: 70%;
 
@@ -24,15 +25,13 @@ $desktopWidth: 1024px;
 $tabletWidth: 768px;
 $phoneWidth: 480px;
 
-.proto {
-
-	div {
+	.block {
 		position:relative;
 		display:table;
 		box-sizing:border-box;
 		width:100%;
 		height:$protoBlockHeight;
-		background:#eee;
+		background:$protoBlockBackground;
 		color:#9099A3;
 	}
 
@@ -122,84 +121,79 @@ $phoneWidth: 480px;
 		display:none;
 	}
 
-}
-
 /* Desktop */
 
 @media (min-width:$desktopWidth) {
 
-	.proto {
-		.desktop-demo,
-		.not-tablet-demo,
-		.not-phone-demo {
-			background:$DemoPass;
-			color:darken($DemoPass,50%);
+	.desktop-demo,
+	.not-tablet-demo,
+	.not-phone-demo {
+		background:$DemoPass;
+		color:darken($DemoPass,50%);
+	}
+
+	.not-desktop-demo,
+	.tablet-demo,
+	.phone-demo {
+		background:$DemoFail;
+		color:darken($DemoFail,50%);
+	}
+
+	.grid {
+
+		.desktop-to-hundred {
+			width:100%;
 		}
 
-		.not-desktop-demo,
-		.tablet-demo,
-		.phone-demo {
-			background:$DemoFail;
-			color:darken($DemoFail,50%);
+		.desktop-to-ninety {
+			width:90%;
 		}
 
-		.grid {
+		.desktop-to-eighty {
+			width:80%;
+		}
 
-			.desktop-to-hundred {
-				width:100%;
-			}
+		.desktop-to-seventyfive {
+			width:75%;
+		}
 
-			.desktop-to-ninety {
-				width:90%;
-			}
+		.desktop-to-seventy {
+			width:70%;
+		}
 
-			.desktop-to-eighty {
-				width:80%;
-			}
+		.desktop-to-sixtysix {
+			width:66.666%;
+		}
 
-			.desktop-to-seventyfive {
-				width:75%;
-			}
+		.desktop-to-sixty {
+			width:60%;
+		}
 
-			.desktop-to-seventy {
-				width:70%;
-			}
+		.desktop-to-fifty {
+			width:50%;
+		}
 
-			.desktop-to-sixtysix {
-				width:66.666%;
-			}
+		.desktop-to-forty {
+			width:40%;
+		}
+		.desktop-to-thirtythree {
+			width:33.333%;
+		}
 
-			.desktop-to-sixty {
-				width:60%;
-			}
+		.desktop-to-thirty {
+			width:30%;
+		}
 
-			.desktop-to-fifty {
-				width:50%;
-			}
+		.desktop-to-twentyfive {
+			width:25%;
+		}
 
-			.desktop-to-forty {
-				width:40%;
-			}
-			.desktop-to-thirtythree {
-				width:33.333%;
-			}
+		.desktop-to-twenty {
+			width:20%;
+		}
 
-			.desktop-to-thirty {
-				width:30%;
-			}
-
-			.desktop-to-twentyfive {
-				width:25%;
-			}
-
-			.desktop-to-twenty {
-				width:20%;
-			}
-
-			.desktop-to-ten {
-				width:10%;
-			}
-
+		.desktop-to-ten {
+			width:10%;
 		}
 
 	}
@@ -210,87 +204,84 @@ $phoneWidth: 480px;
 
 @media (min-width:$tabletWidth) and (max-width:$desktopWidth - 1px) {
 
-	.proto {
+	.tablet {
+		display:table;
+	}
 
-		.tablet {
-			display:table;
+	.not-desktop {
+		display:none;
+	}
+
+	.not-tablet {
+		display:none;
+	}
+
+	.desktop-demo,
+	.tablet-demo,
+	.not-phone-demo {
+		background:$DemoPass;
+		color:darken($DemoPass,50%);
+	}
+
+	.not-desktop-demo,
+	.not-tablet-demo,
+	.phone-demo {
+		background:$DemoFail;
+		color:darken($DemoFail,50%);
+	}
+
+	.grid {
+
+		.tablet-to-hundred {
+			width:100%;
 		}
 
-		.not-desktop {
-			display:none;
+		.tablet-to-ninety {
+			width:90%;
 		}
 
-		.not-tablet {
-			display:none;
+		.tablet-to-eighty {
+			width:80%;
 		}
 
-		.desktop-demo,
-		.tablet-demo,
-		.not-phone-demo {
-			background:$DemoPass;
-			color:darken($DemoPass,50%);
+		.tablet-to-seventyfive {
+			width:75%;
 		}
 
-		.not-desktop-demo,
-		.not-tablet-demo,
-		.phone-demo {
-			background:$DemoFail;
-			color:darken($DemoFail,50%);
+		.tablet-to-seventy {
+			width:70%;
 		}
 
-		.grid {
+		.tablet-to-sixty {
+			width:60%;
+		}
 
-			.tablet-to-hundred {
-				width:100%;
-			}
+		.tablet-to-fifty {
+			width:50%;
+		}
 
-			.tablet-to-ninety {
-				width:90%;
-			}
+		.tablet-to-forty {
+			width:40%;
+		}
 
-			.tablet-to-eighty {
-				width:80%;
-			}
+		.tablet-to-thirtythree {
+			width:33.333%;
+		}
 
-			.tablet-to-seventyfive {
-				width:75%;
-			}
+		.tablet-to-thirty {
+			width:30%;
+		}
 
-			.tablet-to-seventy {
-				width:70%;
-			}
+		.tablet-to-twentyfive {
+			width:25%;
+		}
 
-			.tablet-to-sixty {
-				width:60%;
-			}
+		.tablet-to-twenty {
+			width:20%;
+		}
 
-			.tablet-to-fifty {
-				width:50%;
-			}
-
-			.tablet-to-forty {
-				width:40%;
-			}
-			.tablet-to-thirtythree {
-				width:33.333%;
-			}
-
-			.tablet-to-thirty {
-				width:30%;
-			}
-
-			.tablet-to-twentyfive {
-				width:25%;
-			}
-
-			.tablet-to-twenty {
-				width:20%;
-			}
-
-			.tablet-to-ten {
-				width:10%;
-			}
-
+		.tablet-to-ten {
+			width:10%;
 		}
 
 	}
@@ -301,99 +292,95 @@ $phoneWidth: 480px;
 
 @media (max-width:$tabletWidth - 1px) {
 
-	.proto {
+	.desktop {
+		display:none;
+	}
 
-		.desktop {
-			display:none;
+	.not-desktop {
+		display:table;
+	}
+
+	.tablet {
+		display:table;
+	}
+
+	.not-tablet {
+		display:none;
+	}
+
+	.phone {
+		display:table;
+	}
+
+	.not-phone {
+		display:none;
+	}
+
+	.not-desktop-demo,
+	.tablet-demo,
+	.phone-demo {
+		background:$DemoPass;
+		color:darken($DemoPass,50%);
+	}
+
+	.desktop-demo,
+	.not-tablet-demo,
+	.not-phone-demo {
+		background:$DemoFail;
+		color:darken($DemoFail,50%);
+	}
+
+	.grid {
+
+		.phone-to-hundred {
+			width:100%;
 		}
 
-		.not-desktop {
-			display:table;
+		.phone-to-ninety {
+			width:90%;
 		}
 
-		.tablet {
-			display:table;
+		.phone-to-eighty {
+			width:80%;
 		}
 
-		.not-tablet {
-			display:none;
+		.phone-to-seventyfive {
+			width:75%;
 		}
 
-		.phone {
-			display:table;
+		.phone-to-seventy {
+			width:70%;
 		}
 
-		.not-phone {
-			display:none;
+		.phone-to-sixty {
+			width:60%;
 		}
 
-		.not-desktop-demo,
-		.tablet-demo,
-		.phone-demo {
-			background:$DemoPass;
-			color:darken($DemoPass,50%);
+		.phone-to-fifty {
+			width:50%;
 		}
 
-		.desktop-demo,
-		.not-tablet-demo,
-		.not-phone-demo {
-			background:$DemoFail;
-			color:darken($DemoFail,50%);
+		.phone-to-forty {
+			width:40%;
+		}
+		.phone-to-thirtythree {
+			width:33.333%;
 		}
 
-		.grid {
+		.phone-to-thirty {
+			width:30%;
+		}
 
-			.phone-to-hundred {
-				width:100%;
-			}
+		.phone-to-twentyfive {
+			width:25%;
+		}
 
-			.phone-to-ninety {
-				width:90%;
-			}
+		.phone-to-twenty {
+			width:20%;
+		}
 
-			.phone-to-eighty {
-				width:80%;
-			}
-
-			.phone-to-seventyfive {
-				width:75%;
-			}
-
-			.phone-to-seventy {
-				width:70%;
-			}
-
-			.phone-to-sixty {
-				width:60%;
-			}
-
-			.phone-to-fifty {
-				width:50%;
-			}
-
-			.phone-to-forty {
-				width:40%;
-			}
-			.phone-to-thirtythree {
-				width:33.333%;
-			}
-
-			.phone-to-thirty {
-				width:30%;
-			}
-
-			.phone-to-twentyfive {
-				width:25%;
-			}
-
-			.phone-to-twenty {
-				width:20%;
-			}
-
-			.phone-to-ten {
-				width:10%;
-			}
-
+		.phone-to-ten {
+			width:10%;
 		}
 
 	}
@@ -404,49 +391,45 @@ $phoneWidth: 480px;
 
 @media (max-width:$phoneWidth) {
 
-	.proto {
+	.block,
+	.grid .block {
+		float:none;
+		width:100% !important;
+	}
 
-		div,
-		.grid div {
-			float:none;
-			width:100% !important;
-		}
+	.center {
+		margin:0;
+		width:100%;
+	}
 
-		.center {
-			margin:0;
-			width:100%;
-		}
+	.desktop {
+		display:none;
+	}
 
-		.desktop {
-			display:none;
-		}
+	.tablet {
+		display:none;
+	}
 
-		.tablet {
-			display:none;
-		}
+	.phone {
+		display:table;
+	}
 
-		.phone {
-			display:table;
-		}
+	.not-phone {
+		display:none;
+	}
 
-		.not-phone {
-			display:none;
-		}
+	.not-desktop-demo,
+	.not-tablet-demo,
+	.phone-demo {
+		background:$DemoPass;
+		color:darken($DemoPass,50%);
+	}
 
-		.not-desktop-demo,
-		.not-tablet-demo,
-		.phone-demo {
-			background:$DemoPass;
-			color:darken($DemoPass,50%);
-		}
-
-		.desktop-demo,
-		.tablet-demo,
-		.not-phone-demo {
-			background:$DemoFail;
-			color:darken($DemoFail,50%);
-		}
-
+	.desktop-demo,
+	.tablet-demo,
+	.not-phone-demo {
+		background:$DemoFail;
+		color:darken($DemoFail,50%);
 	}
 
 }
