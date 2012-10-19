@@ -28,7 +28,6 @@ $phoneWidth: 480px;
 
 	div {
 		position:relative;
-		overflow:hidden;
 		box-sizing:border-box;
 		width:100%;
 		height:$protoBlockHeight;
@@ -209,7 +208,7 @@ $phoneWidth: 480px;
 	.proto {
 
 		.tablet {
-			display:table;
+			display:block;
 		}
 
 		.not-desktop {
@@ -308,11 +307,11 @@ $phoneWidth: 480px;
 		}
 
 		.not-desktop {
-			display:table;
+			display:block;
 		}
 
 		.tablet {
-			display:table;
+			display:block;
 		}
 
 		.not-tablet {
@@ -320,7 +319,7 @@ $phoneWidth: 480px;
 		}
 
 		.phone {
-			display:table;
+			display:block;
 		}
 
 		.not-phone {
@@ -430,7 +429,7 @@ $phoneWidth: 480px;
 		}
 
 		.phone {
-			display:table;
+			display:block;
 		}
 
 		.not-phone {
