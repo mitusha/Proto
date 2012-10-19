@@ -1,8 +1,6 @@
 /*------------------------------------*\
  *  Proto by @adamwhitcroft
  *
- *  18.Oct.2012
- *
  *  Proto is a simple HTML & SCSS rapid 
  *  prototyping toolkit for responsive web design.
  *
@@ -30,12 +28,14 @@ $phoneWidth: 480px;
 
 	div {
 		position:relative;
-		display:table;
+		overflow:hidden;
 		box-sizing:border-box;
 		width:100%;
 		height:$protoBlockHeight;
 		background:#eee;
 		color:#9099A3;
+		text-align:center;
+		line-height:$protoBlockHeight;
 	}
 
 	.center {
@@ -43,65 +43,67 @@ $phoneWidth: 480px;
 		width:$centerWidth;
 	}
 
-	.label {
-		display:table-cell;
-		vertical-align:middle;
-		text-align:center;
-	}
-
 	.grid div {
 		float:left;
 	}
 
-	.grid .hundred {
-		width:100%;
-	}
+	.grid {
 
-	.grid .ninety {
-		width:90%;
-	}
+		.hundred {
+			width:100%;
+		}
 
-	.grid .eighty {
-		width:80%;
-	}
+		.ninety {
+			width:90%;
+		}
 
-	.grid .seventyfive {
-		width:75%;
-	}
+		.eighty {
+			width:80%;
+		}
 
-	.grid .seventy {
-		width:70%;
-	}
+		.seventyfive {
+			width:75%;
+		}
 
-	.grid .sixty {
-		width:60%;
-	}
+		.seventy {
+			width:70%;
+		}
 
-	.grid .fifty {
-		width:50%;
-	}
+		.sixtysix {
+			width:66.666%;
+		}
 
-	.grid .forty {
-		width:40%;
-	}
-	.grid .thirtythree {
-		width:33.333%;
-	}
+		.sixty {
+			width:60%;
+		}
 
-	.grid .thirty {
-		width:30%;
-	}
+		.fifty {
+			width:50%;
+		}
 
-	.grid .twentyfive {
-		width:25%;
-	}
+		.forty {
+			width:40%;
+		}
+		.thirtythree {
+			width:33.333%;
+		}
 
-	.grid .twenty {
-		width:20%;
-	}
+		.thirty {
+			width:30%;
+		}
 
-	.grid .ten {
-		width:10%;
+		.twentyfive {
+			width:25%;
+		}
+
+		.twenty {
+			width:20%;
+		}
+
+		.ten {
+			width:10%;
+		}
+
 	}
 
 	.not-desktop {
@@ -137,55 +139,63 @@ $phoneWidth: 480px;
 			color:darken($DemoFail,50%);
 		}
 
-		.grid .desktop-to-hundred {
-			width:100%;
-		}
+		.grid {
 
-		.grid .desktop-to-ninety {
-			width:90%;
-		}
+			.desktop-to-hundred {
+				width:100%;
+			}
 
-		.grid .desktop-to-eighty {
-			width:80%;
-		}
+			.desktop-to-ninety {
+				width:90%;
+			}
 
-		.grid .desktop-to-seventyfive {
-			width:75%;
-		}
+			.desktop-to-eighty {
+				width:80%;
+			}
 
-		.grid .desktop-to-seventy {
-			width:70%;
-		}
+			.desktop-to-seventyfive {
+				width:75%;
+			}
 
-		.grid .desktop-to-sixty {
-			width:60%;
-		}
+			.desktop-to-seventy {
+				width:70%;
+			}
 
-		.grid .desktop-to-fifty {
-			width:50%;
-		}
+			.desktop-to-sixtysix {
+				width:66.666%;
+			}
 
-		.grid .desktop-to-forty {
-			width:40%;
-		}
-		.grid .desktop-to-thirtythree {
-			width:33.333%;
-		}
+			.desktop-to-sixty {
+				width:60%;
+			}
 
-		.grid .desktop-to-thirty {
-			width:30%;
-		}
+			.desktop-to-fifty {
+				width:50%;
+			}
 
-		.grid .desktop-to-twentyfive {
-			width:25%;
-		}
+			.desktop-to-forty {
+				width:40%;
+			}
+			.desktop-to-thirtythree {
+				width:33.333%;
+			}
 
-		.grid .desktop-to-twenty {
-			width:20%;
-		}
+			.desktop-to-thirty {
+				width:30%;
+			}
 
-		.grid .desktop-to-ten {
-			width:10%;
+			.desktop-to-twentyfive {
+				width:25%;
+			}
+
+			.desktop-to-twenty {
+				width:20%;
+			}
+
+			.desktop-to-ten {
+				width:10%;
+			}
+
 		}
 
 	}
@@ -244,6 +254,10 @@ $phoneWidth: 480px;
 
 			.tablet-to-seventy {
 				width:70%;
+			}
+
+			.tablet-to-sixtysix {
+				width:66.666%;
 			}
 
 			.tablet-to-sixty {
@@ -347,6 +361,10 @@ $phoneWidth: 480px;
 
 			.phone-to-seventy {
 				width:70%;
+			}
+
+			.phone-to-sixtysix {
+				width:66.666%;
 			}
 
 			.phone-to-sixty {

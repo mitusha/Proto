@@ -1,8 +1,6 @@
 /*------------------------------------*\
  *  Proto by @adamwhitcroft
  *
- *  18.Oct.2012
- *
  *  Proto is a simple HTML & SCSS rapid 
  *  prototyping toolkit for responsive web design.
  *
@@ -10,19 +8,17 @@
 \*------------------------------------*/
 .proto div {
   position: relative;
-  display: table;
+  overflow: hidden;
   box-sizing: border-box;
   width: 100%;
   height: 80px;
   background: #eee;
-  color: #9099A3; }
+  color: #9099A3;
+  text-align: center;
+  line-height: 80px; }
 .proto .center {
   margin: 0 auto;
   width: 70%; }
-.proto .label {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center; }
 .proto .grid div {
   float: left; }
 .proto .grid .hundred {
@@ -35,6 +31,8 @@
   width: 75%; }
 .proto .grid .seventy {
   width: 70%; }
+.proto .grid .sixtysix {
+  width: 66.666%; }
 .proto .grid .sixty {
   width: 60%; }
 .proto .grid .fifty {
@@ -80,6 +78,8 @@
     width: 75%; }
   .proto .grid .desktop-to-seventy {
     width: 70%; }
+  .proto .grid .desktop-to-sixtysix {
+    width: 66.666%; }
   .proto .grid .desktop-to-sixty {
     width: 60%; }
   .proto .grid .desktop-to-fifty {
@@ -124,6 +124,8 @@
     width: 75%; }
   .proto .grid .tablet-to-seventy {
     width: 70%; }
+  .proto .grid .tablet-to-sixtysix {
+    width: 66.666%; }
   .proto .grid .tablet-to-sixty {
     width: 60%; }
   .proto .grid .tablet-to-fifty {
@@ -174,6 +176,8 @@
     width: 75%; }
   .proto .grid .phone-to-seventy {
     width: 70%; }
+  .proto .grid .phone-to-sixtysix {
+    width: 66.666%; }
   .proto .grid .phone-to-sixty {
     width: 60%; }
   .proto .grid .phone-to-fifty {
