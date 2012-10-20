@@ -12,8 +12,7 @@
 //  (These comments will be stripped out during compile)
 
 //  Base
-$protoBlockBackground: #eee;
-$protoBlockHeight: 80px;
+$blockBackground: #eee;
 $centerWidth: 70%;
 
 //  Demo
@@ -26,13 +25,11 @@ $tabletWidth: 768px;
 $phoneWidth: 480px;
 
 	.block {
-		position:relative;
-		display:table;
 		box-sizing:border-box;
 		width:100%;
-		height:$protoBlockHeight;
-		background:$protoBlockBackground;
+		background:$blockBackground;
 		color:#9099A3;
+		text-align:center;
 	}
 
 	.center {
@@ -40,13 +37,7 @@ $phoneWidth: 480px;
 		width:$centerWidth;
 	}
 
-	.label {
-		display:table-cell;
-		vertical-align:middle;
-		text-align:center;
-	}
-
-	.grid div {
+	.grid .block {
 		float:left;
 	}
 
@@ -205,7 +196,7 @@ $phoneWidth: 480px;
 @media (min-width:$tabletWidth) and (max-width:$desktopWidth - 1px) {
 
 	.tablet {
-		display:table;
+		display:block;
 	}
 
 	.not-desktop {
@@ -250,6 +241,10 @@ $phoneWidth: 480px;
 
 		.tablet-to-seventy {
 			width:70%;
+		}
+
+		.tablet-to-sixtysix {
+			width:66.666%;
 		}
 
 		.tablet-to-sixty {
@@ -297,11 +292,11 @@ $phoneWidth: 480px;
 	}
 
 	.not-desktop {
-		display:table;
+		display:block;
 	}
 
 	.tablet {
-		display:table;
+		display:block;
 	}
 
 	.not-tablet {
@@ -309,7 +304,7 @@ $phoneWidth: 480px;
 	}
 
 	.phone {
-		display:table;
+		display:block;
 	}
 
 	.not-phone {
@@ -350,6 +345,10 @@ $phoneWidth: 480px;
 
 		.phone-to-seventy {
 			width:70%;
+		}
+
+		.phone-to-sixtysix {
+			width:66.666%;
 		}
 
 		.phone-to-sixty {
@@ -393,8 +392,9 @@ $phoneWidth: 480px;
 
 	.block,
 	.grid .block {
-		float:none;
-		width:100% !important;
+		clear:left; /* better results than float:none; after tests */
+		width:100%;
+		display:block;
 	}
 
 	.center {
@@ -411,7 +411,7 @@ $phoneWidth: 480px;
 	}
 
 	.phone {
-		display:table;
+		display:block;
 	}
 
 	.not-phone {

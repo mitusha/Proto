@@ -7,24 +7,17 @@
  *  http://adamwhitcroft.com/proto/
 \*------------------------------------*/
 .block {
-  position: relative;
-  display: table;
   box-sizing: border-box;
   width: 100%;
-  height: 80px;
   background: #eeeeee;
-  color: #9099A3; }
+  color: #9099A3;
+  text-align: center; }
 
 .center {
   margin: 0 auto;
   width: 70%; }
 
-.label {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center; }
-
-.grid div {
+.grid .block {
   float: left; }
 
 .grid .hundred {
@@ -110,7 +103,7 @@
 /* Tablet Up To Desktop */
 @media (min-width: 768px) and (max-width: 1023px) {
   .tablet {
-    display: table; }
+    display: block; }
 
   .not-desktop {
     display: none; }
@@ -140,6 +133,8 @@
     width: 75%; }
   .grid .tablet-to-seventy {
     width: 70%; }
+  .grid .tablet-to-sixtysix {
+    width: 66.666%; }
   .grid .tablet-to-sixty {
     width: 60%; }
   .grid .tablet-to-fifty {
@@ -162,16 +157,16 @@
     display: none; }
 
   .not-desktop {
-    display: table; }
+    display: block; }
 
   .tablet {
-    display: table; }
+    display: block; }
 
   .not-tablet {
     display: none; }
 
   .phone {
-    display: table; }
+    display: block; }
 
   .not-phone {
     display: none; }
@@ -198,6 +193,8 @@
     width: 75%; }
   .grid .phone-to-seventy {
     width: 70%; }
+  .grid .phone-to-sixtysix {
+    width: 66.666%; }
   .grid .phone-to-sixty {
     width: 60%; }
   .grid .phone-to-fifty {
@@ -218,8 +215,10 @@
 @media (max-width: 480px) {
   .block,
   .grid .block {
-    float: none;
-    width: 100% !important; }
+    clear: left;
+    /* better results than float:none; after tests */
+    width: 100%;
+    display: block; }
 
   .center {
     margin: 0;
@@ -232,7 +231,7 @@
     display: none; }
 
   .phone {
-    display: table; }
+    display: block; }
 
   .not-phone {
     display: none; }
